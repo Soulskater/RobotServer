@@ -55,5 +55,9 @@ function _onClientConnection() {
         socket.on(eventEnum.command, function (arrayBuffer) {
             _emit(eventEnum.command, arrayBuffer);
         });
+
+        socket.on(eventEnum.telemetry, function (arrayBuffer) {
+            _emit(eventEnum.telemetry, arrayBuffer);
+        });
     });
 }
